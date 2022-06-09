@@ -1,0 +1,30 @@
+Problem Statement:
+Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+Solution:
+Since question is asking us a element in array that appears more than n/2 when we observe the bit pattern we
+can see that if the number is appearing more than n/2 times then the bit pattern will also repeat for more than
+n/2 times so we just need to store the count of set bits for all the 32 bit.
+
+eg: [2,3,2]
+n/2 is 1
+2 -> 010
+3 -> 011
+2 -> 010
+
+final ans -> 010
+
+Algorithm:
+1. create an int array of 32 bits
+2.iterate over each array elements
+for each element iterate over its all 32 bit and update the count of set bit at appropriate position
+3. after this intitilize ans with zero and iterate over 32 size array created in step 1 and
+set only those bits whose count is greater than n/2
+4. return ans
+
+TC -> O(32*N) -> O(N)
+SC -> O(32) -> O(1) since the size of array does not change as the size of input array changes
+
+Problem Link: https://leetcode.com/problems/majority-element/
