@@ -1,0 +1,27 @@
+Problem Statement:
+Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
+
+Solution:
+Since the question ask us to find the count of set bits for number in a range we can just iterate over range
+and check if the number has a set bit or not then right shift the number and repeat the process at the end we 
+push the number to our ans
+
+inorder to make less number of iteration we can use n=n&(n-1) because it skip all the bits that zero between
+two set bits which reduce number of iteration in practice
+why does it works is because it makes all bits zero from the least set bit from right
+
+eg:
+n=4
+
+1st iteration
+4 -> 100
+3 -> 011
+4&3 -> 000
+the number(n) is same before the least set bit from right after it will set all bits to zero
+so it will iterate the loop untill it has set bits not for all bits. here in case of 4 it is one time rather
+than 3 times.
+
+TC -> O(nlogn)
+SC -> O(1)
+
+Problem Link: https://leetcode.com/problems/counting-bits/
