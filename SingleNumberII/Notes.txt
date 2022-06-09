@@ -1,0 +1,27 @@
+Problem Statement:
+Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+Solution:
+Since element appears three times so we cannot use the same property that we have used in single number I
+So there are two cases 
+case1: the number which we need to find has Common bit with the other numbers at a particular position in its binary representation.
+the number of set bit at a particular position will always be 3*k+1
+because each number appears 3 times there can be many such number and 1 for the number we are interested to find
+case2: the number which we need to find has no common bit with other numbers at a particular position in its binary representation
+if nothing is common the number of set bit is 1
+
+for zero we do not care because it will handled by initializing number with zero
+
+Final Approach:
+iterate over all 32 bit
+for each bit check if the number has set bit at that position or not 
+if it has set bit then increase the count by 1
+after all numbers in array have been processed check if the count is not perfectly divisible by 3 (count%3!=0)
+if it follows above condition just set  the bit at that particular position.
+
+TC -> O(32*N) -> O(N)
+SC -> O(1)
+
+Problem Link: https://leetcode.com/problems/single-number-ii/submissions/
