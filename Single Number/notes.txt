@@ -1,0 +1,13 @@
+Problem Statement:
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+Solution: 
+Since XOR is self inverse we just need to find xor of all the elements which will cancel
+the duplicates present in the array leaving us with the only number which appear one time.
+
+TC -> O(N)
+SC -> O(1)
+
+Problem Link : https://leetcode.com/problems/single-number/
