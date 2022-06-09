@@ -22,6 +22,6 @@ so it will iterate the loop untill it has set bits not for all bits. here in cas
 than 3 times.
 
 TC -> O(nlogn)
-SC -> O(1)
+SC -> O(n)
 
 Problem Link: https://leetcode.com/problems/counting-bits/
