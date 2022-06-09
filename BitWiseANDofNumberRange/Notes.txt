@@ -1,0 +1,34 @@
+Problem Statement:
+Given two integers left and right that represent the range [left, right], return the bitwise AND of all numbers in this range, inclusive.
+
+Solution:
+the idea we use over here is that once we have a range no matter how many times we encounter
+a set bit at a particular position even if we encounter a single unset(0) bit then
+its contribution will be zero in the answer
+eg : [5,7] 
+
+5 -> 101
+6 -> 110
+7 -> 111
+
+5&6&7 = 100
+though we have two set bit at position two from right but a single 0 bit made our answer
+as zero at that position
+
+so we need to find only the common part that is not changing since it is the part that will remain intact and will be pass as
+it as we go on computing Bitwise AND in that range
+another thing is that the part which is changing will always be zero and its count is 
+important since we need to shift our ans by that many position as their contribution
+will be zero at the end of computation
+
+so the overall question boils down to find the common part of numbers we do not need 
+to go over all numbers in range to find common part we can find common part between left and right
+because left act as lower threshold meaning no change in bits below that or it is like base.
+if some common part exist as per the above observation we will find it if everything is
+changing then ans is zero
+
+TC -> O(logn)
+SC -> O(1)
+
+Problem Link : https://leetcode.com/problems/bitwise-and-of-numbers-range/
+ 
