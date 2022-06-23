@@ -1,0 +1,15 @@
+Problem Statement:
+Given four integer arrays nums1, nums2, nums3, and nums4 all of length n, return the number of tuples (i, j, k, l) such that:
+
+    0 <= i, j, k, l < n
+    nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0
+
+Solution:
+The idea here is to store pair wise sum in a hashmap and find the corresponding negative pair in the other two and
+then add the cnt of it to the ans
+
+
+TC -> O(N^2)
+SC -> O(N^2) reason as there are N^2 pairs that are stored in map
+
+Problem Link: https://leetcode.com/problems/4sum-ii/
