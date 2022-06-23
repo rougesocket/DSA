@@ -1,0 +1,15 @@
+problem statement:
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+
+Notice that the solution set must not contain duplicate triplets.
+
+Solution:
+sort the array and
+the idea here is to make one value of expression as constant and then apply two sum logic
+since the question requires unique arrays only we can do this using set but it will cost extra space we 
+can get rid of that space that by detecting the duplicate use solution to see exact implementation
+
+TC -> O(N^2)
+SC -> O(N)
+
+problem link: https://leetcode.com/problems/3sum/
