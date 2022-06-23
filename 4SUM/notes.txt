@@ -1,0 +1,18 @@
+Problem Statement:
+Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
+
+    0 <= a, b, c, d < n
+    a, b, c, and d are distinct.
+    nums[a] + nums[b] + nums[c] + nums[d] == target
+
+You may return the answer in any order.
+
+Solution:
+so the idea over here is to make two things constant and apply two sum problem logic
+whenever you hit target just add it to your set so that you can have unique arr
+at last just create a vector of vector and return from there
+
+TC -> O(N^3) 
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/4sum/
