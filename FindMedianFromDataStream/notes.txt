@@ -1,0 +1,43 @@
+Problem Statement:
+The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value and the median is the mean of the two middle values.
+
+    For example, for arr = [2,3,4], the median is 3.
+    For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5.
+
+Implement the MedianFinder class:
+
+    MedianFinder() initializes the MedianFinder object.
+    void addNum(int num) adds the integer num from the data stream to the data structure.
+    double findMedian() returns the median of all elements so far. Answers within 10-5 of the actual answer will be accepted.
+
+Solution:
+The idea here is to observe the fact that sorted stream carries inorder to have median at a faster rate
+we need the elemenet which is largest among the elements from start in the sorted order and
+the lowest element in the later half
+eg 1 2 3 4 
+median is (2 +3)/2
+so we require to get 2 and 3 at faster rate
+we can achieve this using heaps the number of heap required is two
+one of type max heap inorder to store elements of first half and max element at faster rate
+other of  type min heap inorder to store elements of later half and get min element at faster rate
+
+NOTE:
+we put elements into our min heap only when we have any element and the top of it is less than it
+otherwise we put into our max heap
+
+but a size difference of two between the heaps will give incorrect ans as median get shifted
+so inorder to fix these we push elements from greater size heap to small size heap so that we have
+the correct median at top
+
+for getting the median we just need to check the size of heaps if they are equal what does it mean
+it means that we have even elements and the median is the average of the two
+otherwise we have odd elements the first n elements will be in max heap and the later half will be in min heap
+and the one which contain median will have size greater than the other so return that as your ans
+
+Time Complexity:
+add() -> O(log k) for each addition if there are n addition -> O(nlogn)
+findMedian() -> O(1) for each query if there are n of them -> O(N)
+
+SC -> O(N)
+
+Problem Link:
