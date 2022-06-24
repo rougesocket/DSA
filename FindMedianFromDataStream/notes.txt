@@ -35,7 +35,7 @@ otherwise we have odd elements the first n elements will be in max heap and the 
 and the one which contain median will have size greater than the other so return that as your ans
 
 Time Complexity:
-add() -> O(log k) for each addition if there are n addition -> O(nlogn)
+add() -> O(log k) if the height of tree is k for each addition if there are n addition -> O(nlogn)
 findMedian() -> O(1) for each query if there are n of them -> O(N)
 
 SC -> O(N)
