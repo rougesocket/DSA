@@ -1,0 +1,17 @@
+Problem Statement:
+Design a data structure that supports adding new words and finding if a string matches any previously added string.
+
+Implement the WordDictionary class:
+
+    WordDictionary() Initializes the object.
+    void addWord(word) Adds word to the data structure, it can be matched later.
+    bool search(word) Returns true if there is any string in the data structure that matches word or false otherwise. word may contain dots '.' where dots can be matched with any letter.
+
+Solution:
+the question is similar to use case of trie the only tricky part is how one is going to handle the . in a search
+string. it can be handled by applying dfs from curr node as we find a dot.
+
+TC -> O(h) for each operation on trie;
+SC -> O(26^h * cost of space for each node);
+
+Problem Link : https://leetcode.com/problems/design-add-and-search-words-data-structure/submissions/
