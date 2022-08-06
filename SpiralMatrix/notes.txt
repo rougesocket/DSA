@@ -1,0 +1,12 @@
+Problem Statement:
+Given an m x n matrix, return all elements of the matrix in spiral order.
+
+Solution:
+the idea here is to observe pattern in which you need to print and take variable accordingly
+
+TC -> O(N*M) where n is length of row and m is length of column
+SC -> O(1)
+
+
+Problem Link:
+https://leetcode.com/problems/spiral-matrix/
