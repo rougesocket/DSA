@@ -1,0 +1,21 @@
+Problem Statement:
+Given a reference of a node in a connected undirected graph.
+
+Return a deep copy (clone) of the graph.
+
+Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
+
+class Node {
+    public int val;
+    public List<Node> neighbors;
+}
+
+Solution:
+
+the idea here is to use any graph exploration algorithm and create copy of the curr node and hash it
+so that later we can adjust connections between them once all required node are created.
+
+TC -> O(V+E) for dfs
+SC -> O(V) for hashmap
+
+Problem Link : https://leetcode.com/problems/clone-graph/
