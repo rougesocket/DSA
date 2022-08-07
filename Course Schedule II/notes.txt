@@ -1,0 +1,28 @@
+Problem Statement:
+There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
+
+    For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
+
+Return the ordering of courses you should take to finish all courses. If there are many valid answers, return any of them. If it is impossible to finish all courses, return an empty array.
+
+Solution:
+The idea here is to use topological sort because we want to have similar order in the question. here we will
+use kahn algorithm since we are given edge list in form of prerequisites. also we want to find whether they have
+cycle or not if the graph has a cycle then size of topological sort will not be equal to number of nodes.
+
+Steps:
+1. Create Indegree array and Adjacency list
+2. Store all zero indegree nodes in queue
+3. repeat till your queue is not empty
+4. go over all nodes at current level
+5. reduce their indegree by 1
+6. if any nodes indegree becomes 0 add it to your queue
+7. end repeat
+8. if size of top sort is not equal to n we have a cycle so we return empty list
+   else we return the curr ans
+
+TC -> O(V+E)
+SC -> O(V+E)
+
+Problem Link:
+https://leetcode.com/problems/course-schedule-ii/
