@@ -1,0 +1,18 @@
+Problem Statement:
+There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, and city b is connected directly with city c, then city a is connected indirectly with city c.
+
+A province is a group of directly or indirectly connected cities and no other cities outside of the group.
+
+You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith city and the jth city are directly connected, and isConnected[i][j] = 0 otherwise.
+
+Return the total number of provinces.
+
+Solution:
+the idea here is to Disjoint set. since we need to find number of group of connected vertices. Since there
+are N vertices so each find and union operation requires log N time. and we need to iterate over N*N matrix so
+time complexity is n*n*logn
+
+TC -> O(N*N*logN)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/number-of-provinces/
