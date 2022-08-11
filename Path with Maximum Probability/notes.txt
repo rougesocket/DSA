@@ -1,0 +1,26 @@
+Problem statement:
+You are given an undirected weighted graph of n nodes (0-indexed), represented by an edge list where edges[i] = [a, b] is an undirected edge connecting the nodes a and b with a probability of success of traversing that edge succProb[i].
+
+Given two nodes start and end, find the path with the maximum probability of success to go from start to end and return its success probability.
+
+If there is no path from start to end, return 0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.
+
+Solution:
+we need to find a path from source to end vertex if it vertex but with max probability. since it is a path so each vertex should appear
+only once. so we need to maintain a visited array and we need to explore that all path from vertex and the one which
+gives max probability needs to explore in the next iteration. The similar behaviour can be implmented using
+Dijkstra algorithm with few modification since we need max so we use max heap and since we need the vertex which
+need to be explored so we make a pair of probability and vertex and pick that vertex with max probability
+and continue untill queue become empty or we reach our target. if we do not find target in our exploration
+we cannot reach it so we return zero. we need to make start vertex probability as 1 because we need to multiply
+it with other probability of edges.
+
+Data Structures:
+1. Adjancey list (for representing graph)
+2. weight array (for storing probablity of different vertex)
+3. Priority queue (for max operation)
+
+TC -> O(ElogV)
+SC -> O(V+E)
+
+Problem Link: https://leetcode.com/problems/path-with-maximum-probability/
