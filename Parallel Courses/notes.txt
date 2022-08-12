@@ -1,0 +1,16 @@
+Problem Statement:
+You are given an integer N which denotes the number of courses numbered from 1 to N and a matrix  ‘prerequisites’, in which each row contains exactly two integers ‘A’ and ‘B’ which represents the course ‘A’ has to be studied in some semester before studying course ‘B’.
+You are supposed to find the minimum number of semesters required to study all the courses.
+
+Solution:
+Since we need to find order in which courses need to completed so we use topological ordering as there 
+is prerequisite to each course. if topological ordering is not possible we cannot complete course and hence 
+cannot find minimum number of semester so we return -1 else to find minimum number of semesters all those
+courses that can completed independently must be scheduled in the same semester that is increase count by 1
+and each time in a level if we got some independent courses all those can be scheduled in the same semester
+(increase count by 1).
+
+TC -> O(V+E)
+SC -> O(V+E) 
+
+Problem Link: https://www.codingninjas.com/codestudio/problems/parallel-courses
