@@ -1,0 +1,15 @@
+Problem Link: 
+Given the root of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
+
+A binary search tree is balanced if the depth of the two subtrees of every node never differs by more than 1.
+
+Solution:
+The idea to use over here is the inorder traversal of binary tree is always sorted and once we have inorder
+traversal ready we can create a height balance tree by always partitioning the array from middle.
+time complexity is linear for finding inorder traversal and linear to build the tree since we visit
+all the nodes and it requires O(1) time to perform build operation O(N*1) = O(N)
+
+TC -> O(N)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/balance-a-binary-search-tree/
