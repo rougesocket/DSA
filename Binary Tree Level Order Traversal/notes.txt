@@ -1,0 +1,10 @@
+Problem Statement:
+Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+
+Solution:
+The idea here is to use Level Order Traversal(BFS Traversal).
+
+TC -> O(N)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/binary-tree-level-order-traversal/
