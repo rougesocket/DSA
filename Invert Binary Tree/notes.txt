@@ -1,0 +1,10 @@
+Problem statement:
+Given the root of a binary tree, invert the tree, and return its root.
+
+Solution:
+The idea here is to use dfs traversal and when you return from recurion you perform swapping.
+
+TC -> O(N)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/invert-binary-tree/
