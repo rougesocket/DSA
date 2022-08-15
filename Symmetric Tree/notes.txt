@@ -1,0 +1,15 @@
+Problem Statement:
+Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+
+Solution:
+The idea here is to use dfs traversal with two pointer one for left subtree and one for right subtree since root
+is always symmetric so we check if the left subtree and right subtree is symmetric or not.
+
+NOTE:
+the left subtree left child should be matched with right subtree right child and viceversa since it is a mirror
+view.
+
+TC -> O(N)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/symmetric-tree/
