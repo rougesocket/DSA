@@ -10,4 +10,4 @@ non null value is propogated to top and if both of the path give non null value 
 TC -> O(N)
 SC -> O(N)
 
-Problem Link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/submissions/
+Problem Link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
