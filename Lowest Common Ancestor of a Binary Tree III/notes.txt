@@ -10,4 +10,4 @@ so assign slower to faster and viceversa untill they meet when they meet that is
 TC -> O(N)
 SC -> O(N)
 
-Problem Link: https://www.codingninjas.com/codestudio/problems/lowest-common-ancestor-of-a-binary-tree-iii
+Problem Link: https://www.codingninjas.com/codestudio/problems/lowest-common-ancestor-of-a-binary-tree-iii_1280134
