@@ -1,0 +1,21 @@
+Problem Statement:
+Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
+
+For each node at position (row, col), its left and right children will be at positions (row + 1, col - 1) and (row + 1, col + 1) respectively. The root of the tree is at (0, 0).
+
+The vertical order traversal of a binary tree is a list of top-to-bottom orderings for each column index starting from the leftmost column and ending on the rightmost column. There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
+
+Return the vertical order traversal of the binary tree.
+
+Solution:
+The idea here is to draw vertical lines from each node so inorder to represent position of each node we need 
+depth of the node,the vertical line it follows and level it is present
+so for each vertical line there can be multiple level and there can multiple node with same value.Also we require
+a sorted value for all our vertical line so we use map and level order traversal to traverse the tree.
+once we are done processing each node we traverse map which maintains sorted order and insert it into our list
+of ans.
+
+TC -> O(NlogN)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
