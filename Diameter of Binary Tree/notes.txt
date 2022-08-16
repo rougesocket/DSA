@@ -1,0 +1,17 @@
+Problem Statement:
+Given the root of a binary tree, return the length of the diameter of the tree.
+
+The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+
+The length of a path between two nodes is represented by the number of edges between them.
+
+Solution:
+calculate the height for each node and the diameter for current node is nothing but sum of left height and 
+right height for that node inorder to find max diameter we need to return the one which gives max benifit from
+left or right +1 for current node and return it to its parent. since path is continous and does not include 
+repeated nodes.
+
+TC -> O(N)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/diameter-of-binary-tree/
