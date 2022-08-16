@@ -1,0 +1,14 @@
+Problem Statement:
+Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
+
+Solution:
+since we are provided with inorder and preorder so we can construct a unique tree. we have preorder so we know
+about root node we find root from preorder we have to find root's position inorder so that we can split 
+the node in left subtree and right subtree we recusively break the tree and when we are not able to do that
+we return from that point and whatever it returns from sub tree we assign it accordingly to left and right half
+and we return parent back.
+
+TC -> O(N)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
