@@ -1,0 +1,10 @@
+Problem Statement:
+Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).
+
+Solution:
+Use Level order traversal with a direction variable to indicate Left to right or right to left direction.
+
+TC -> O(N)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
