@@ -1,0 +1,29 @@
+Problem Statement:
+Given an array of integers preorder, which represents the preorder traversal of a BST (i.e., binary search tree), construct the tree and return its root.
+
+It is guaranteed that there is always possible to find a binary search tree with the given requirements for the given test cases.
+
+A binary search tree is a binary tree where for every node, any descendant of Node.left has a value strictly less than Node.val, and any descendant of Node.right has a value strictly greater than Node.val.
+
+A preorder traversal of a binary tree displays the value of the node first, then traverses Node.left, then traverses Node.right.
+
+Solution:
+The idea here is to first find the inorder to create the same tree from where the given preorder is found and
+then recursively build left and right half
+to find inorder we just sort the preorder to get inorder as it is binary search tree
+
+TC -> O(NlogN)
+SC -> O(N)
+
+Alternate approach is to take limit value and create tree from preorder.since preorder contains the root
+the left subtree and the right subtree so first node is always the root. so when we recursively build tree as
+long as it statifies the property of BST we go on building it and as soon as we find a voilation we return.
+So we require a variable to have a limit of value we can have in the left and the right part. once we begin
+for the very first time we can have any value from -INF to +INF so we start the function with INT_MAX as the 
+limit upon succesive node creation we modify the value of limit to the value of node we have.
+
+TC -> O(N)
+SC -> O(N) for recursion
+
+
+Problem Link: https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
