@@ -1,0 +1,11 @@
+Problem Statement:
+This problem is part of leetcode premium similar name problem can be found on gfg
+
+Solution:
+The idea here is we start with a higher value and try to compress the value based on path we have
+to increase we move to right to decrease we move to left.the most recent update is answer.
+
+TC -> O(H)
+SC -> O(1)
+
+Problem Link: https://practice.geeksforgeeks.org/problems/inorder-successor-in-bst/
