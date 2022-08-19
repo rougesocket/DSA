@@ -1,0 +1,17 @@
+Problem Statement:
+Given the root of a binary tree, the value of a target node target, and an integer k, return an array of the values of all nodes that have a distance k from the target node.
+
+You can return the answer in any order.
+
+Solution:
+Populate Parent Pointer for each node and then use Level order Traveral Stop at level==k
+hashtable can be used to store parent pointer
+
+Two Method for populating parent pointer
+1.Use DFS Metod
+2. Use Level order Traversal
+
+TC -> O(N)
+SC -> O(N)
+
+Problem Link: https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/
