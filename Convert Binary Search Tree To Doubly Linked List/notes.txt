@@ -1,0 +1,14 @@
+Problem Statement:
+1. Convert a Binary Search Tree to a sorted Circular Doubly-Linked List in place.
+2. The left and right pointers in nodes are to be used as previous and next pointers respectively in converted DLL. 
+3. The order of nodes in DLL must be the same as in Inorder for the given Binary Search Tree. The first node of Inorder traversal (leftmost node in BST) must be the head node of the DLL. 
+
+Solution:
+the idea here is to use inorder traversal when you process the node whatever was previous head just
+assign it to current's left child and head's right child is current. update the head so that it point to
+immediate previous element. the process the right subtree
+
+TC -> O(N)
+SC -> O(N) for recurion stack space
+
+Problem Link: https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/trees/convert-binary-search-tree-to-doubly-linked-list/ojquestion
